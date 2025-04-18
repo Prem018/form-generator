@@ -27,7 +27,7 @@ DynamicFormGenerator/ ├── index.html ├── style.css ├── script.
 
 🚀 How to Run the Project
 Clone the repository:
-git clone <https://github.com/Prem018/medical-and-travel-expense.git>
+git clone <https://github.com/Prem018/form-generator/tree/main/AdventureBooker>
 cd DynamicFormGenerator
 Open index.html in any modern web browser.
 
