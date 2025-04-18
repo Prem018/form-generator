@@ -1,0 +1,194 @@
+@media print {
+    /* General print styles */
+    body {
+        margin: 0;
+        padding: 0;
+        background: white;
+        color: #000 !important;
+        font-size: 12pt;
+    }
+    
+    .container {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .page {
+        width: 100%;
+        height: 11in;
+        margin: 0;
+        padding: 0.5in;
+        box-shadow: none;
+        page-break-after: always;
+        position: relative;
+        box-sizing: border-box;
+    }
+    
+    .page:last-child {
+        page-break-after: avoid;
+    }
+    
+    /* Hide elements not meant for printing */
+    .no-print, .no-print * {
+        display: none !important;
+    }
+    
+    .navbar, .actions {
+        display: none !important;
+    }
+    
+    /* Make tables and form elements visible */
+    table, th, td {
+        border: 1px solid #000 !important;
+        border-collapse: collapse !important;
+        width: 100%;
+        color: #000 !important;
+    }
+    
+    th {
+        background-color: #f0f0f0 !important;
+        font-weight: bold !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        padding: 5px !important;
+    }
+    
+    td {
+        padding: 5px !important;
+    }
+    
+    /* Header and footer */
+    .header, .footer {
+        display: block !important;
+        width: 100% !important;
+        color: #000 !important;
+    }
+    
+    .header {
+        margin-bottom: 20px !important;
+    }
+    
+    .footer {
+        position: absolute !important; 
+        bottom: 0.5in !important;
+        left: 0.5in !important;
+        right: 0.5in !important;
+        border-top: 1px solid #ccc !important;
+        padding-top: 10px !important;
+    }
+    
+    .header-title {
+        font-size: 16pt !important;
+        font-weight: bold !important;
+    }
+    
+    /* Form inputs */
+    input[type="text"], .text-field, .date-field, textarea, .textarea-field {
+        border: 1px solid #000 !important;
+        background-color: #fff !important;
+        color: #000 !important;
+        padding: 2px 5px !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        font-family: inherit !important;
+    }
+    
+    input[type="text"], .text-field, .date-field {
+        min-width: 80px !important;
+        display: inline-block !important;
+        font-size: 11pt !important;
+    }
+    
+    textarea, .textarea-field {
+        width: 100% !important;
+        min-height: 60px !important;
+        font-size: 11pt !important;
+    }
+    
+    /* Checkboxes */
+    input[type="checkbox"] {
+        -webkit-appearance: none !important;
+        -moz-appearance: none !important;
+        appearance: none !important;
+        width: 12px !important;
+        height: 12px !important;
+        border: 1px solid #000 !important;
+        position: relative !important;
+        display: inline-block !important;
+        margin: 3px 5px 0 0 !important;
+        vertical-align: middle !important;
+    }
+    
+    input[type="checkbox"]:checked {
+        background-color: #000 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+    
+    input[type="checkbox"]:checked:after {
+        content: "✓" !important;
+        color: white !important;
+        position: absolute !important;
+        top: -3px !important;
+        left: 1px !important;
+        font-size: 12px !important;
+    }
+    
+    .checkbox-item {
+        margin-bottom: 5px !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+    
+    label {
+        font-size: 11pt !important;
+    }
+    
+    /* Pain scale */
+    .pain-scale {
+        display: flex !important;
+        justify-content: space-between !important;
+        margin: 15px 0 !important;
+    }
+    
+    .pain-item {
+        text-align: center !important;
+        margin: 0 5px !important;
+    }
+    
+    /* Sections and text */
+    .section h2 {
+        font-size: 14pt !important;
+        margin: 15px 0 10px !important;
+        border-bottom: 1px solid #000 !important;
+        padding-bottom: 5px !important;
+    }
+    
+    p {
+        margin: 10px 0 !important;
+        font-size: 11pt !important;
+        line-height: 1.4 !important;
+    }
+    
+    .disclaimer {
+        font-style: italic !important;
+        font-size: 10pt !important;
+    }
+    
+    .certification, .privacy-notice {
+        margin: 15px 0 !important;
+        padding: 5px !important;
+        border: 1px solid #ccc !important;
+        background-color: #f9f9f9 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+    
+    /* Page settings */
+    @page {
+        size: letter portrait;
+        margin: 0;
+    }
+}

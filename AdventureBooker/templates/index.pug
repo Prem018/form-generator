@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  div.container
+    h1 WCB Form System
+    
+    div.form-list
+      div.form-item
+        h3 Medical & Travel Expense Request
+        p This form is used to request reimbursement for medical and travel expenses related to workplace injuries.
+        p 
+          a.btn(href="/medical-expense") View Form
+      
+      div.form-item
+        h3 Worker Progress Report
+        p This form is used to report on recovery progress and return to work status for workplace injuries.
+        p 
+          a.btn(href="/worker-progress") View Form
+    
+    div.usage-instructions
+      h2 How to Use This System
+      
+      p This system allows you to view, fill out, and print WCB forms.
+      
+      ol
+        li Select a form from the options above or from the navigation menu.
+        li Fill in the required information in the form fields.
+        li Use the "Switch Data Set" button to view alternative example data.
+        li Click the "Print Form" button to generate a printable version of the form.
+        li The form will print on standard letter (8.5" x 11") paper.

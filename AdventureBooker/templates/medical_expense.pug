@@ -1,0 +1,165 @@
+extends layout
+
+block content
+  div.container.medical-expense-form
+    div.actions.no-print
+      button.btn.btn-print Print Form
+      button.btn.btn-switch Switch Data Set
+    
+    //- Page 1
+    div.page
+      div.header
+        div.header-logo
+          p 333 Broadway
+          p Winnipeg, MB R3C 4W3
+          p Phone: (204) 954-4321
+          p Toll Free: 1-855-954-4321
+          p wcb.mb.ca
+        div.header-info
+          div.header-title Medical & Travel Expense Request
+          p Claim No. #{form_data.claim_number}
+      
+      p #{form_data.worker_name} requested reimbursement for the following medical and/or travel expenses:
+      
+      //- Prescription Drugs Section
+      div.section
+        h2 Prescription Drugs
+      
+      table#prescription-drugs
+        thead
+          tr
+            - var headers = ["Drug Name", "Prescription Date", "Date Purchased", "Healthcare Provider Name", "Paid Amount"]
+            each header in headers
+              th #{header}
+        tbody
+          each row in form_data.prescription_drugs
+            tr
+              each cell in row
+                td
+                  input.text-field(type="text", value=cell)
+        
+      div.table-actions.no-print
+        button.btn.add-row-btn(type="button", data-table="prescription-drugs") Add Row
+      
+      //- Over-the-Counter Drugs Section
+      div.section
+        h2 Over-the-Counter Drugs
+      
+      table#otc-drugs
+        thead
+          tr
+            - var headers = ["Drug Name", "Date Purchased", "Paid Amount", "Seller's Name", "Reason for Purchasing"]
+            each header in headers
+              th #{header}
+        tbody
+          each row in form_data.otc_drugs
+            tr
+              each cell in row
+                td
+                  input.text-field(type="text", value=cell)
+        
+      div.table-actions.no-print
+        button.btn.add-row-btn(type="button", data-table="otc-drugs") Add Row
+      
+      //- Medical Supplies Section
+      div.section
+        h2 Bandages, Braces or Other Medical Supplies
+      
+      table#medical-supplies
+        thead
+          tr
+            - var headers = ["Item Purchased", "Date Purchased", "Was this Prescribed?", "Healthcare Provider Name", "Paid Amount", "Seller's Name"]
+            each header in headers
+              th #{header}
+        tbody
+          each row in form_data.medical_supplies
+            tr
+              each cell in row
+                td
+                  input.text-field(type="text", value=cell)
+        
+      div.table-actions.no-print
+        button.btn.add-row-btn(type="button", data-table="medical-supplies") Add Row
+      
+      //- Parking Section
+      div.section
+        h2 Parking for Medical Appointments
+      
+      table#parking-table
+        thead
+          tr
+            - var headers = ["Address of Healthcare Provider/Medical Facility", "Date", "Paid Amount", "Meter Used?", "Meter Number"]
+            each header in headers
+              th #{header}
+        tbody
+          each row in form_data.parking
+            tr
+              each cell in row
+                td
+                  input.text-field(type="text", value=cell)
+        
+      div.table-actions.no-print
+        button.btn.add-row-btn(type="button", data-table="parking") Add Row
+      
+      //- Mileage Section
+      div.section
+        h2 Mileage to Medical Appointments
+      
+      p.disclaimer The WCB will generally reimburse only those transportation costs which are in excess of costs that would be incurred by the worker while travelling to and from work.
+      
+      table#mileage-table
+        thead
+          tr
+            - var headers = ["Appointment Date", "Address of Healthcare Provider/Medical Facility", "Address of Workplace", "Number of km (Round Trip)"]
+            each header in headers
+              th #{header}
+        tbody
+          each row in form_data.mileage
+            tr
+              each cell in row
+                td
+                  input.text-field(type="text", value=cell)
+        
+      div.table-actions.no-print
+        button.btn.add-row-btn(type="button", data-table="mileage") Add Row
+      
+      div.footer
+        div.footer-info
+          p Worker App ID: #{form_data.worker_app_id}
+          div.page-number Submitted: #{form_data.submitted_date}
+          div.page-number Page 1 of 2
+    
+    //- Page 2
+    div.page
+      //- Bus or Taxi Section
+      div.section
+        h2 Bus or Taxi Fare for Medical Appointments*
+      
+      p.disclaimer *Note: Pre-approval is required from your WCB representative to claim taxi fare(s).
+      
+      table#bus-taxi-table
+        thead
+          tr
+            - var headers = ["Appointment Date", "Address of Starting Point", "Address of Healthcare Provider/Medical Facility", "Bus or Taxi (indicate one)", "Total Fare Paid"]
+            each header in headers
+              th #{header}
+        tbody
+          each row in form_data.bus_taxi
+            tr
+              each cell in row
+                td
+                  input.text-field(type="text", value=cell)
+        
+      div.table-actions.no-print
+        button.btn.add-row-btn(type="button", data-table="bus-taxi") Add Row
+      
+      div.privacy-notice
+        div.checkbox-item
+          input(type="checkbox", name="privacy-notice", id="privacy-notice")
+          label(for="privacy-notice") I understand that the Privacy Notice applies to the personal information collected in this document.
+      
+      div.footer
+        div.footer-info
+          p Worker App ID: #{form_data.worker_app_id}
+          div.page-number Submitted: #{form_data.submitted_date}
+          div.page-number Page 2 of 2

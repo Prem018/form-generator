@@ -1,0 +1,69 @@
+//- Mixin for creating form headers
+mixin formHeader(title, claimNumber, formType)
+  div.header
+    div.header-logo
+      p 333 Broadway
+      p Winnipeg, MB R3C 4W3
+      p Phone: (204) 954-4321
+      p Toll Free: 1-855-954-4321
+      p wcb.mb.ca
+    div.header-info
+      div.header-title= title
+      if claimNumber
+        p Claim No. #{claimNumber}
+
+//- Mixin for creating form footers
+mixin formFooter(workerId, submittedDate, page, totalPages)
+  div.footer
+    div.footer-info
+      p Worker App ID: #{workerId}
+      div.page-number Submitted: #{submittedDate}
+      div.page-number Page #{page} of #{totalPages}
+
+//- Mixin for creating form sections
+mixin formSection(title)
+  div.section
+    h2= title
+
+//- Mixin for creating tables with dynamic rows
+mixin dynamicTable(headers, rows, tableId)
+  table
+    thead
+      tr
+        each header in headers
+          th= header
+    tbody
+      each row in rows
+        tr
+          each cell, index in row
+            td
+              input.text-field(type="text", value=cell)
+    
+    div.no-print
+      button.btn.add-row-btn(type="button", data-table=tableId) Add Row
+
+//- Mixin for creating checkbox groups
+mixin checkboxGroup(options, name, checked)
+  div.checkbox-group
+    each option, index in options
+      div.checkbox-item
+        if checked && checked === option
+          input(type="checkbox", name=name, id=`${name}-${index}`, value=option, checked, class="exclusive")
+        else
+          input(type="checkbox", name=name, id=`${name}-${index}`, value=option, class="exclusive")
+        label(for=`${name}-${index}`)= option
+
+//- Mixin for creating text areas
+mixin textArea(value, name, placeholder)
+  textarea.textarea-field(name=name, placeholder=placeholder)= value
+
+//- Mixin for creating pain scale selectors (1-10)
+mixin painScale()
+  div.pain-scale
+    - var i = 1
+    while i <= 10
+      div.pain-item
+        span= i
+        br
+        input(type="checkbox", name="pain-scale", value=i, id=`pain-${i}`, class="exclusive")
+      - i++

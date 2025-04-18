@@ -1,0 +1,125 @@
+{
+  "medical_expense": {
+    "set1": {
+      "claim_number": "20042047",
+      "worker_name": "Madeleine Willson",
+      "worker_app_id": "712041",
+      "submitted_date": "March 28, 2024 20:43",
+      "prescription_drugs": [
+        ["Naproxen", "February 28, 2024", "February 29, 2024", "Dr. Best", "$20.00"]
+      ],
+      "otc_drugs": [
+        ["Advil", "March 28, 2024", "$8.00", "Shoppers Drug Mart", "Pain"]
+      ],
+      "medical_supplies": [
+        ["Tensor", "February 28, 2024", "Yes", "Dr. Best", "$10.00", "Shoppers DrugMart"]
+      ],
+      "parking": [
+        ["333 St Mary Ave, Winnipeg MB R3C4A5, Canada", "March 28, 2024", "$10.00", "yes", "12245"]
+      ],
+      "mileage": [
+        ["March 28, 2024", "HSC, 820 Sherbrook St, Winnipeg MB R3A 1R9, Canada", "WCB, 333 Broadway, Winnipeg MB R3C 4W3,Canada", "20 km"]
+      ],
+      "bus_taxi": [
+        ["March 28, 2024", "", "HSC Winnipeg Women's Hospital, 665 William Ave, Winnipeg MB R3E 0Z2, Canada", "Bus", "$3.00"],
+        ["March 27, 2024", "25 Furby St, Winnipeg MB R3C 2A2, Canada", "440 Edmonton St, Winnipeg MB R3B 2M4, Canada", "Taxi", "$15.00"]
+      ]
+    },
+    "set2": {
+      "claim_number": "20042048",
+      "worker_name": "John Smith",
+      "worker_app_id": "712042",
+      "submitted_date": "April 5, 2024 15:30",
+      "prescription_drugs": [
+        ["Ibuprofen", "April 1, 2024", "April 2, 2024", "Dr. Johnson", "$15.00"],
+        ["Acetaminophen", "April 3, 2024", "April 3, 2024", "Dr. Johnson", "$12.50"]
+      ],
+      "otc_drugs": [
+        ["Tylenol", "April 4, 2024", "$7.50", "Walmart Pharmacy", "Headache"]
+      ],
+      "medical_supplies": [
+        ["Wrist Brace", "April 1, 2024", "Yes", "Dr. Johnson", "$25.00", "Medical Supply Store"],
+        ["Hot/Cold Pack", "April 2, 2024", "No", "", "$15.00", "Walmart"]
+      ],
+      "parking": [
+        ["123 Main St, Winnipeg MB R3C 1A5, Canada", "April 2, 2024", "$8.00", "yes", "45678"],
+        ["456 Oak Ave, Winnipeg MB R3C 2B6, Canada", "April 4, 2024", "$12.00", "yes", "98765"]
+      ],
+      "mileage": [
+        ["April 2, 2024", "Winnipeg Clinic, 425 St Mary Ave, Winnipeg MB R3C 0N2, Canada", "ABC Manufacturing, 123 Industry Blvd, Winnipeg MB R2R 0T1, Canada", "15 km"],
+        ["April 4, 2024", "St. Boniface Hospital, 409 Taché Ave, Winnipeg MB R2H 2A6, Canada", "ABC Manufacturing, 123 Industry Blvd, Winnipeg MB R2R 0T1, Canada", "25 km"]
+      ],
+      "bus_taxi": [
+        ["April 3, 2024", "789 Residential St, Winnipeg MB R3T 5L7, Canada", "Victoria General Hospital, 2340 Pembina Hwy, Winnipeg MB R3T 2E8, Canada", "Bus", "$3.00"]
+      ]
+    }
+  },
+  "worker_progress": {
+    "set1": {
+      "claim_number": "20042047",
+      "worker_name": "Madeleine Willson",
+      "worker_app_id": "712041",
+      "submitted_date": "March 19, 2024 19:21",
+      "return_to_work": {
+        "status": "I returned to work on:",
+        "date": "March 15, 2024",
+        "working_status": "Full duties, regular hours",
+        "progress": "Terrible. Testing Testing",
+        "expected_return": "",
+        "concerns": "",
+        "employer_contact": "",
+        "contact_date": ""
+      },
+      "recovery": {
+        "status": "I have not fully recovered from my workplace injury.",
+        "comments": "",
+        "pain_level": 5,
+        "treatment_status": "I am not continuing to receive medical treatment for my workplace injury.",
+        "provider_type": "",
+        "last_treatment_date": "",
+        "last_provider": "",
+        "next_treatment_date": "",
+        "next_provider": "",
+        "treatment_frequency": "",
+        "medication_status": "I am not taking medication for my workplace injury.",
+        "medication": "",
+        "exercise_status": "I am not doing home exercises for my workplace injury.",
+        "exercises": ""
+      },
+      "other_info": "No info Testing Testing"
+    },
+    "set2": {
+      "claim_number": "20042048",
+      "worker_name": "John Smith",
+      "worker_app_id": "712042",
+      "submitted_date": "April 5, 2024 14:30",
+      "return_to_work": {
+        "status": "I have not returned to work",
+        "date": "",
+        "working_status": "Other:",
+        "progress": "",
+        "expected_return": "April 15, 2024",
+        "concerns": "I'm concerned about lifting heavy items which is required in my job.",
+        "employer_contact": "Sarah Johnson",
+        "contact_date": "April 2, 2024"
+      },
+      "recovery": {
+        "status": "I have not fully recovered from my workplace injury.",
+        "comments": "My back pain is improving but I still have limited mobility.",
+        "pain_level": 7,
+        "treatment_status": "I am continuing to receive medical treatment for my workplace injury from:",
+        "provider_type": "Physiotherapist",
+        "last_treatment_date": "April 2, 2024",
+        "last_provider": "Dr. Williams",
+        "next_treatment_date": "April 9, 2024",
+        "next_provider": "Dr. Williams",
+        "treatment_frequency": "Twice weekly",
+        "medication_status": "I am taking medication for my workplace injury:",
+        "medication": "Naproxen 500mg",
+        "exercise_status": "I am doing home exercises for my workplace injury.",
+        "exercises": "Light stretching, back strengthening exercises, walking"
+      },
+      "other_info": "I would like to discuss potential modified duties with my employer."
+    }
+  }
+}

@@ -1,0 +1,23 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title WCB Form System
+    link(rel="stylesheet", href="/static/css/styles.css")
+    link(rel="stylesheet", href="/static/css/print.css", media="print")
+  body
+    nav.navbar.no-print
+      div.container
+        a.navbar-brand(href="/") WCB Form System
+        ul.navbar-nav
+          li.nav-item
+            a.nav-link(href="/") Home
+          li.nav-item
+            a.nav-link(href="/medical-expense") Medical Expense
+          li.nav-item
+            a.nav-link(href="/worker-progress") Worker Progress
+    
+    block content
+    
+    script(src="/static/js/script.js")
